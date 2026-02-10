@@ -1,0 +1,34 @@
+# =========== 核心深度学习框架 ===========
+mindspore==2.6.0
+
+# MindSpore的自然语言处理套件，用于加载模型和LoRA微调
+mindnlp==0.4.0
+
+# =========== 数据处理与加载 ===========
+# 用于读取 .json 数据集 (代码中使用了 pd.read_json)
+pandas>=1.5.3
+
+# 用于处理数值计算
+numpy>=1.24.0
+
+# HuggingFace Datasets库，用于高效加载和处理文本数据
+# (代码中使用了 from datasets import Dataset)
+datasets>=2.14.0
+
+# =========== 模型与分词依赖 ===========
+# Qwen系列模型分词器通常需要的依赖
+sentencepiece>=0.1.99
+
+# 防止分词器加载时的协议报错
+protobuf>=3.20.0
+
+# 进度条显示 (训练过程中 tqdm 进度条)
+tqdm>=4.66.0
+
+# LoRA 微调库
+# 注意：MindNLP 0.4.0 通常集成了 PEFT 功能，但如果代码显式引用了 peft 库，建议安装
+peft>=0.5.0
+
+# =========== 其他工具 ===========
+# 用于处理 JSON 数据
+jsonschema>=4.17.0
